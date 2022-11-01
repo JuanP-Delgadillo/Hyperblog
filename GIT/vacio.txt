@@ -2,3 +2,5 @@ Hola mundo! Soy Juan Pablo y tengo 21 anos
 y este es mi curso de aprender GIT
 
 En camara parece alto, pero el persona no lo es.
+
+Hoy es el CEO de platzi.
