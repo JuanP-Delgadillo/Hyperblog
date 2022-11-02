@@ -13,10 +13,13 @@
             </div>
             <div id="post">
                 <h1>CURSO GIT:</h1>
+                <p>"Basicamente este es un blog en el cual voy a hablar de como aprendi lo basico de GIT y como avance en el proceso de este curso, donde quiero dar a conocer algunas cosas basicas
+                    como comandos, creaciones etc.. Para facilitar a quien quiera aprender, estos fueron mis apuntes a medida que tome este gran curso
+                    donde a nivel personal es algo muy importante para aprender a trabajar en un entorno de trabajo con varias personas que conforman un equipo de desarollo. (Espero sea de gran ayuda)"</p>
                 <p>¿Qué es GIT?: Es un sistema de versiones distribuido, diseñado por Linus Torvalds.
-                    GIT cuenta con 3 estados en los que podemos encontrar nuestros archivos: STAGED, MODIFIED y COMMITTED
-                    ¿Qué es GITHUB?: Github es una plataforma de desarrollo colaborativo para alojar proyectos utilizando el sistema de control de versiones Git. Se emplea principalmente para la creación de código fuente de programas de computadora.</p>
-                <h1>Comandos basicos de GIT</h1>
+                    GIT cuenta con 3 estados en los que podemos encontrar nuestros archivos: STAGED, MODIFIED y COMMITTED<br>
+                   ¿Qué es GITHUB?: Github es una plataforma de desarrollo colaborativo para alojar proyectos utilizando el sistema de control de versiones Git. Se emplea principalmente para la creación de código fuente de programas de computadora.</p>
+                <h1>Comandos basicos de GIT/GITHUB</h1>
                 <p> * INIT: Es el que arranca el repositorio EJ: $ git init<br>
                     * ADD: Es el que arranca el archivo EJ: $ git add biografia.txt<br>
                     * COMMIT: Es el que envia los ultimos cambios del archivo a la BD de sistema de control de versiones EJ: $ git commit -m "versión 1"<br>
@@ -29,7 +32,115 @@
                     * Este comando sirve para traer un archivo: $ git pool<br>
                     * $ git log --stat: Vamos a ver los cambios especificos de cada archivo apartir del commit, con la letra Q nos salimos de ese stat<br>
                     * $ git fetch: Esto es para traer la actualización que alguien mas añadio al proyecto, esto lo trae en el repositorio local pero no lo fuciona con nuestros archivos.</p>
-                <p></p>
+                <h1>Comandos Linux</h1>
+                <p> * pwd: valida en que carpeta nos encontramos en estos momentos.<br>
+                    * cd: esto nos sirve para navegar en una carpeta<br>
+                    * cd /: El / sirve para ir al home<br>
+                    * ls: listar los archivos<br>
+                    * ls -al: esto sirve para llamar argumentos, esto es para que me llame todos los archivos asi sean ocultos, y que los   coloque en una lista.<br>
+                    * ls -l: esto me llama los archivos pero no me muestra los ocultos<br>
+                    * ls -a: este comando solo me muestra los archivos que estan ocultos<br>
+                    * clear/ Ctrl + L: esto sirve para limpiar la consola<br><br><br>
+                    
+                    
+                    * Como crear una carpeta: ° mkdir "Nombre de tu carpeta"<br>
+                    * Como crear un archivo vacio: ° touch "vacio.txt"<br>
+                    * Como ver el contenido de un archivo: ° cat "Elegimos el archivo el cual queremos ver el contenido"<br>
+                    * Como ver la historia de comandos que he realizado: ° history<br>
+                    * Para eliminar un archivo de la carpeta: ° rm =  que significa remove. y elegimos el archivo que deseamos eliminar<br>
+                    * $ git rm --cached: es eliminar desde la ram<br><br>
+                    * este comando sirve para ayudar a saber como se utiliza cada uno de los comandos: ° --help EJ: rm --help</p>
+                <h1>¿Como configurar GIT?</h1>
+                <p> $ git config: encontramos todas las configuraciones que tiene GIT<br><br>
+                    $ git config --list: vemos la configuración por defecto y las cosas que le falta a nuestro git<br><br>
+                    $ git config --list --show-origin: Vemos donde estan las configuraciones guardadas<br><br>
+                    $ git config --global user.name: Esto es para configurar el usuario de GIT<br>
+                        EJ: user.name "Juan Delgadillo"<br>
+                            user.email "Jupadelgir@gmail.com"<br><br>
+                    
+                    $ git diff: este comando sirve para ver puntual el cambio que hayan realizado, copiamos el numero del commit
+                             y lo pegamos al comando, y de esta manera nos muestra el cambio que se realizo, copiamos el otro numero del commit y comparamos que cambios se han realizado 
+                             del primer numero al segundo.</p>
+                <h1>Proceso MERGE</h1>
+                <p>Es aquel el cual se realizan cambios en el master, creando ramas como development para despues unirlo a el proyecto final llamado MERGE, cuando hay un booug en la versión final y toca hacer un arreglo y sacar una rama especial para eso, esto se llama HOTFIX.<br><br>
+
+                    $ git branch: permite crear una rama nueva. Si quieres empezar a trabajar en una nueva función, puedes crear una rama nueva a partir de la rama master con git branch new_branch. Una vez creada, puedes usar git checkout new_branch para cambiar a esa rama.<br><br>
+                    
+                    $ git reset: este comando nos permite volver a una versión anterior<br><br>
+                        --hard: Este nos devuelve todo al estado anterior.<br>
+                        --soft: volvemos en la versión anterior si no que el stellin sigue igual sin afectarlo.<br><br>
+                    
+                    $ git reset HEAD: Este es el comando para sacar archivos del área de staging. No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.<br><br>
+                    
+                    $ git checkout: Este comando sirve para ver como el archivo era al comienzo de editarlo.<br><br>
+                        EJ: $ git checkout 35e21b40af09cd732c6fbc0700d6ae2b38835bee vacio.txt | y añadimos el numero de serie que nos da el commit, mas el archivo especifico que queremos ver, esto nos lleva a la primera version del archivo sin haber perdido nada de lo que realice. "OJO, NO DAR COMMIT YA QUE DE LO CONTRARIO BORRARIA TODO LO QUE HEMOS AVANZADO EN EL MASTER"<br><br>
+                    
+                    $ git checkout master vacio.txt | Este comando nos srive para nos vuelva a actualizar a los cambios que ya teniamos.</p>
+                <h1>LINEA DE COMANDOS GITHUB</h1>
+                <p> * git log --oneline - Te muestra el id commit y el título del commit.<br>
+                    * git log --decorate- Te muestra donde se encuentra el head point en el log.<br>
+                    * git log --stat - Explica el número de líneas que se cambiaron brevemente.<br>
+                    * git log -p- Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.<br>
+                    * git shortlog - Indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits.<br>
+                    * git log --graph --oneline --decorate y<br>
+                    * git log --pretty=format:"%cn hizo un commit %h el dia %cd" - Muestra mensajes personalizados de los commits.<br>
+                    * git log -3 - Limitamos el número de commits.<br>
+                    * git log --after=“2018-1-2” ,<br>
+                    * git log --after=“today” y<br>
+                    * git log --after=“2018-1-2” --before=“today” - Commits para localizar por fechas.<br>
+                    * git log --author=“Name Author” - Commits realizados por autor que cumplan exactamente con el nombre.<br>
+                    * git log --grep=“INVIE” - Busca los commits que cumplan tal cual está escrito entre las comillas.<br>
+                    * git log --grep=“INVIE” –i- Busca los commits que cumplan sin importar mayúsculas o minúsculas.<br>
+                    * git log – index.html- Busca los commits en un archivo en específico.<br>
+                    * git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.<br>
+                    * git log > log.txt - guardar los logs en un archivo txt</p>
+                <h1>COMANDOS PARA TRABAJAR REMOTO CON GIT</h1>
+                <p>* git clone url_del_servidor_remoto: Nos permite descargar los archivos de la última versión de la rama principal y todo el   historial de cambios en la carpeta .git.<br>
+                    * git push: Luego de hacer git add y git commit debemos ejecutar este comando para mandar los cambios al servidor remoto.<br>
+                    * git fetch: Lo usamos para traer actualizaciones del servidor remoto y guardarlas en nuestro repositorio local (en caso de   que hayan, por supuesto).<br>
+                    * git merge: También usamos el comando git merge con servidores remotos. Lo necesitamos para combinar los últimos cambios   del servidor remoto y nuestro directorio de trabajo.<br>
+                    * git pull: Básicamente, git fetch y git merge al mismo tiempo.</p>
+                <h1>COMO CREAR UNA RAMA</h1>
+                <p> $git show: Muestra los cambios realizados o las creaciones.<br><br>
+                    $ git branch: se crea la rama y se le da el nombre: "cabecera"<br><br>
+                    $ git checkout: me muevo a la rama que quiero, y especifico a que rama me quiero dirigir para editar, en este caso "cabecera"<br><br>
+                    "Nota: Cuando ya tengamos acabada la rama y queramos unir el branch al master lo hacemos de la siguiente manera: $ git merge (el nombre del branch en este caso cabecera) y damos enter", esto hace que se una el trabajo, OJO realizar esta union siempre desde el master.<br><br>
+                    * git branch -nombre de la rama-: Con este comando se genera una nueva rama.<br>
+                    * git checkout -nombre de la rama-: Con este comando puedes saltar de una rama a otra.<br>
+                    * git checkout -b rama: Genera una rama y nos mueve a ella automáticamente, Es decir, es la combinación de git brach y git * checkout al mismo tiempo.<br>
+                    * git reset id-commit: Nos lleva a cualquier commit no importa la rama, ya que identificamos el id del tag., eliminando el   historial de los commit posteriores al tag seleccionado.<br>
+                    * git checkout rama-o-id-commit: Nos lleva a cualquier commit sin borrar los commit posteriores al tag seleccionado.</p><br>
+                <P>Vamos a hacer una pausa y vamos a validar los comandos que hemos visto hasta el momento</P><br>
+                <h1>DETALLE DE CADA COMANDO GIT/GITHUB</h1>
+                <p>- Comandos básicos de GitHub:<br>
+                    * git init: crear un repositorio.<br>
+                    * git add: agregar un archivo a staging.<br>
+                    * git commit -m “mensaje”: guardar el archivo en git con un mensaje.<br>
+                    * git branch: crear una nueva rama.<br>
+                    * git checkout: moverse entre ramas.<br>
+                    * git push: mandar cambios a un servidor remoto.<br>
+                    * git fetch: traer actualizaciones del servidor remoto y guardarlas en nuestro repositorio local.<br>
+                    * git merge: tiene dos usos. Uno es la fusión de ramas, funcionando como un commit en la rama actual, trayendo la rama indicada. Su otro uso es guardar los cambios de un servidor remoto en nuestro directorio.<br>
+                    * git pull: fetch y merge al mismo tiempo.<br><br>
+                    
+                    - Comandos para corrección en GitHub:<br>
+                    * git checkout “codigo de version” “nombre del archivo”: volver a la última versión de la que se ha hecho commit.<br>
+                    * git reset: vuelve al pasado sin posibilidad de volver al futuro, se debe usar con especificaciones.<br>
+                    * git reset --soft: vuelve a la versión en el repositorio, pero guarda los cambios en staging. Así, podemos aplicar actualizaciones a un nuevo commit.<br>
+                    * git reset --hard: todo vuelve a su versión anterior<br>
+                    * git reset HEAD: saca los cambios de staging, pero no los borra. Es lo opuesto a git add.<br>
+                    * git rm: elimina los archivos, pero no su historial. Si queremos recuperar algo, solo hay que regresar. se utiliza así:<br>
+                    * git rm --cached elimina los archivos en staging pero los mantiene en el disco duro.<br>
+                    * git rm --force elimina los archivos de git y del disco duro.<br><br>
+                    
+                    - Comandos para revisión y comparación en GitHub:<br>
+                    * git status: estado de archivos en el repositorio.<br>
+                    * git log: historia entera del archivo.<br>
+                    * git log --stat: cambios específicos en el archivo a partir de un commit.<br>
+                    * git show: cambios históricos y específicos hechos en un archivo.<br>
+                    * git diff “codigo de version 1” “codigo de version 2”: comparar cambios entre versiones.<br>
+                    * git diff: comparar directorio con staging.<br>
+                </p>
             </div>
         </div>
     </body>
